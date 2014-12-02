@@ -17,3 +17,8 @@ $jumbotron-bg: white;
 .navbar-brand {
 	font-weight: bold;
 }
+
+.checkbox-inline input[type="checkbox"] {
+	position: absolute;
+	margin-left: 1px;
+}
