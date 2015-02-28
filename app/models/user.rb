@@ -7,4 +7,10 @@ class User < ActiveRecord::Base
   has_many :pins
 
   validates :name, presence: true
+
+  after_create:send_notification
+
+  def send_notification
+  	AdminMailer.new_user(self).deliver
+  end
 end
