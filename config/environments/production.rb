@@ -74,6 +74,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Required for Heroku
+  # set this to the actual host
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 

@@ -55,8 +55,5 @@ class PinsController < ApplicationController
       params.require(:pin).permit(:description, :image)
     end
 
-    def contact
-
-    end
 
 end
