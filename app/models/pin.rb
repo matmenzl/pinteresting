@@ -5,5 +5,7 @@ class Pin < ActiveRecord::Base
 	validates :description, presence: true
 	validates :image, presence: true
 
+  geocoded_by :address
+  after_validation :geocode 
 end
 

@@ -8,7 +8,10 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
 
-  after_create:send_notification
+  after_create :send_notification
+
+  geocoded_by :address
+  after_validation :geocode 
 
   def send_notification
   	AdminMailer.new_user(self).deliver
