@@ -5,7 +5,7 @@ class PinsController < ApplicationController
 
   def index
     # @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
-    @pins = Pin.near(current_user.address).order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @pins = Pin.near(current_user.try(:address)).order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   def show
