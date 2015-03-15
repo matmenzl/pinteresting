@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="panel panel-default">
+           <div class="panel-heading center">
+            <%= form_tag "#", class: "form-horizontal" do %>
+              <fieldset>
+                <!-- Message body -->
+                <div class="form-group">
+                  <%= label_tag :message, "Your Message", class: "col-md-3 control-label" %>
+                  <div class="col-md-9">
+                    <%= text_area_tag :message, "", placeholder: "Please enter your message here...", rows: "5", class: "form-control" %>
+                  </div>
+                </div>
+        
+                <!-- Form actions -->
+                <div class="form-group">
+                  <div class="col-md-12 text-right">
+                    <%= submit_tag "Submit", class: "btn btn-primary btn-lg" %>
+                  </div>
+                </div>
+              </fieldset>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
