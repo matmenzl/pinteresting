@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   root "pins#index"
+
   get "about" => "pages#about"
-  get "contact" => "pages#contact"
+  get "contact/:id" => "pages#contact", as: "contact"
+
+  post "contact_owner/:id" => "pins#contact_owner", as: "contact_owner"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -40,6 +40,12 @@ class PinsController < ApplicationController
     redirect_to pins_url
   end
 
+  def contact_owner
+    PinsContact.owner(current_user.email, Pin.find(params[:id]).user.email, params[:message]).deliver
+    flash[:notice] = "Your Message has been sent!"
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
