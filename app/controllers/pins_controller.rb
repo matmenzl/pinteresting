@@ -4,8 +4,10 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    # @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
-    @pins = Pin.near(current_user.try(:address)).order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @q = Pin.ransack(params[:q])
+
+    @pins = params[:search] ? Pin.search(params[:search]) : @q.result(distinct: true)
+    @pins = @pins.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   def show
@@ -40,6 +42,12 @@ class PinsController < ApplicationController
     redirect_to pins_url
   end
 
+  def contact_owner
+    PinsContact.owner(current_user.email, Pin.find(params[:id]).user.email, params[:message]).deliver
+    flash[:notice] = "Your Message has been sent!"
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
@@ -55,6 +63,4 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description, :image, :address)
     end
-
-
 end
