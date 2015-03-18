@@ -1,9 +1,10 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+<div class="well well-large">
 <div class="container">
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
-          <h3>Search by Location:</h3>
+          <h3>Find your neighbourhood:</h3>
       </div>
   </div>
   <div class="row">
@@ -11,7 +12,7 @@
         <%= form_tag pins_path, method: :get, class: "search-form" do %>
           <div class="form-group has-feedback">
             <%= label_tag :search, nil, class: "sr-only" %>
-            <%= text_field_tag :search, "", class: "form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
+            <%= text_field_tag :search, "", class: "form-control", placeholder: "f.e. Zurich, Albisrieden or Basel, Kleinhünigen" %>
             <span class="glyphicon glyphicon-search form-control-feedback"></span>
           </div>
         <% end %>
@@ -19,7 +20,7 @@
   </div>
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
-          <h3>Full-Text Search:</h3>
+          <h3>Find offers or requests:</h3>
       </div>
   </div>
   <div class="row">
@@ -27,12 +28,13 @@
         <%= search_form_for @q, class: "search-form" do |f| %>
           <div class="form-group has-feedback">
             <%= f.label :description_cont, class: "sr-only" %>
-            <%= f.text_field :description_cont, class: "form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
+            <%= f.text_field :description_cont, class: "form-control", placeholder: "f.e. Dog-Sitter, Ladder, Drilling Machine etc." %>
             <span class="glyphicon glyphicon-search form-control-feedback"></span>
           </div>
         <% end %>
       </div>
   </div>
+</div>
 </div>
 
 <div id="pins" class="transitions-enabled">
