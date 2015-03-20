@@ -8,6 +8,8 @@ class Pin < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode 
 
+  markable_as :offer, :request
+
   def self.search(address)
     near(address)
   end

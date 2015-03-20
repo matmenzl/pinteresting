@@ -11,6 +11,13 @@ GIT
       polyamorous (~> 1.1)
 
 GIT
+  remote: git://github.com/effektz/markable.git
+  revision: b9286de8a8043f247f07dddf0d0867026600e3a1
+  specs:
+    markable (0.1.4)
+      rails (>= 3.1)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: 79d42b62ebacb26bfda98fb2f9707f5d5a0e51fb
   specs:
@@ -178,6 +185,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  markable!
   masonry-rails (~> 0.2.0)
   paperclip!
   pg

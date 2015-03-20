@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'geocoder'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
+gem 'markable', github: "effektz/markable"
 
 group :development, :test do 
 	gem 'sqlite3'
