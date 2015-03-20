@@ -1,64 +1,85 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
-<div class="well well-large">
 <div class="container">
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
-          <h3>Find your neighbourhood:</h3>
+          <h3>Search by Location:</h3>
       </div>
   </div>
   <div class="row">
       <div class="col-md-4 col-md-offset-3">
-        <%= form_tag pins_path, method: :get, class: "search-form" do %>
-          <div class="form-group has-feedback">
-            <%= label_tag :search, nil, class: "sr-only" %>
-            <%= text_field_tag :search, "", class: "form-control", placeholder: "f.e. Zurich, Albisrieden or Basel, Kleinhünigen" %>
-            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        <%= form_tag pins_path, method: :get, class: "form-search" do %>
+          <div class="form-group">
+            <%= text_field_tag :search, "", class: "form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
+          </div>
+          <div class="form-group">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
           </div>
         <% end %>
       </div>
   </div>
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
-          <h3>Find offers or requests:</h3>
+          <h3>Full-Text Search:</h3>
       </div>
   </div>
   <div class="row">
       <div class="col-md-4 col-md-offset-3">
-        <%= search_form_for @q, class: "search-form" do |f| %>
-          <div class="form-group has-feedback">
-            <%= f.label :description_cont, class: "sr-only" %>
-            <%= f.text_field :description_cont, class: "form-control", placeholder: "f.e. Dog-Sitter, Ladder, Drilling Machine etc." %>
-            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-          </div>
+        <%= search_form_for @q, class: "form-search" do |f| %>
+            <div class="form-group">
+              <%= f.text_field :description_cont, class: "input-medium search-query form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Search", class: "btn btn-primary" %>
+            </div>
         <% end %>
       </div>
   </div>
-</div>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <h3>Show only:</h3>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4 col-md-offset-3">
+        <%= link_to "Offers", filters_path('offer') %><br>
+        <%= link_to "Requests", filters_path('request') %>
+      </div>
+  </div>
 </div>
 
 <div id="pins" class="transitions-enabled">
-  <% @pins.each do |pin| %>
-    <div class="box panel panel-default">
-      <%= link_to image_tag(pin.image.url(:medium)), pin %>
-      <div class="panel-body">
-        <%= pin.description %><br/>
-        <strong><%= pin.user.name if pin.user %></strong>
+  <% if @pins.any? %>
+    <% @pins.each do |pin| %>
+      <div class="box panel panel-default">
+        <%= link_to image_tag(pin.image.url(:medium)), pin %>
+        <div class="panel-body">
+          <%= pin.description %><br/>
+          <strong><%= pin.user.name if pin.user %></strong>
 
 
 
-        <% if current_user && (pin.user == current_user) %>
-          <div class="actions">
-              <%= link_to edit_pin_path(pin) do %>
-              <span class="glyphicon glyphicon-edit"></span>
-              Edit
-            <% end %>
-            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <span class="glyphicon glyphicon-trash"></span>
-              Delete
-            <% end %>
-          </div>
-        <% end %>
+          <% if current_user && (pin.user == current_user) %>
+            <div class="actions">
+                <%= link_to edit_pin_path(pin) do %>
+                <span class="glyphicon glyphicon-edit"></span>
+                Edit
+              <% end %>
+              <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <span class="glyphicon glyphicon-trash"></span>
+                Delete
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h3>We don't have any results for <%= params[:q] ? params[:q][:description_cont] : params[:search] %></h3>
+        </div>
       </div>
     </div>
   <% end %>

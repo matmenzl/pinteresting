@@ -6,7 +6,11 @@ class PinsController < ApplicationController
   def index
     @q = Pin.ransack(params[:q])
 
-    @pins = params[:search] ? Pin.search(params[:search]) : @q.result(distinct: true)
+    if params[:filter]
+      @pins = Pin.marked_as(params[:filter].downcase.to_sym)
+    else
+      @pins = params[:search] ? Pin.search(params[:search]) : @q.result(distinct: true)
+    end
     @pins = @pins.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
@@ -23,6 +27,7 @@ class PinsController < ApplicationController
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
+      @pin.mark_as params[:pin_type].downcase.to_sym, current_user
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
       render action: 'new'
