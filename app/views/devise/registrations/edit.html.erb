@@ -14,17 +14,17 @@
      </div>
 
      <div class="form-group">
-        <%= f.label :address %>
+        <%= f.label :address %> <i>Only publish your city and neighbourhood, not your street-adress due to privacy- and safety-issues</i>
         <%= f.text_field :address, class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-        <%= f.label :phone, "Phone Number" %>
+        <%= f.label :phone, "Phone Number" %> <i>Publish your Phone-Number that your neighbours can reach you faster, you don't have to</i>
         <%= f.text_field :phone, class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email %> <i>Your e-mail won't be public, you get contacted with a contact-form</i>
         <%= f.email_field :email, class: "form-control", :autofocus => true %>
       </div>
 

@@ -9,7 +9,7 @@
      </div>
      <div class="panel-body">
        <p><%= @pin.description %></p>
-       <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+       <p><strong><%= @pin.user.name if @pin.user %></strong></p>
        <p><%= @pin.address %></p>
        <%= link_to contact_path(@pin.id) do %>
          <span class="glyphicon glyphicon-envelope" title="Email"></span>
