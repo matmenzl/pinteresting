@@ -11,6 +11,7 @@ class PinsController < ApplicationController
     else
       @pins = params[:search] ? Pin.search(params[:search]) : @q.result(distinct: true)
     end
+    build_map
     @pins = @pins.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
@@ -62,6 +63,10 @@ class PinsController < ApplicationController
     def correct_user
       @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice: "Not authorized to edit this pin" if @pin.nil?
+    end
+
+    def build_map
+      @markers = current_user.build_markers(params[:search]) if current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

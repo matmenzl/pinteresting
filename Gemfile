@@ -19,9 +19,12 @@ gem 'will_paginate-bootstrap'
 gem 'geocoder'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
 gem 'markable', github: "effektz/markable"
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 group :development, :test do 
 	gem 'sqlite3'
+  gem 'pry'
 end
 
 group :production do
