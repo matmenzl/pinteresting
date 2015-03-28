@@ -13,5 +13,11 @@ class Pin < ActiveRecord::Base
   def self.search(address)
     near(address)
   end
+
+  def gmaps_infowindow
+    "<a href='/pins/#{id}'><img src=\"#{image.url}\" width= '200' height='200'></a><br> 
+    #{description}<br>
+    <strong>#{user.name}</strong>"
+  end
 end
 
