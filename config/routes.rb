@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Blogit::Engine => "/blog"
+
   resources :pins
 
   devise_for :users
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   get "contact/:id" => "pages#contact", as: "contact"
 
   post "contact_owner/:id" => "pins#contact_owner", as: "contact_owner"
+  post "share_pin/:id" => "pins#share", as: "share_pin"
 
   get "filtered/:filter" => "pins#index", as: "filters"
   # The priority is based upon order of creation: first created -> highest priority.

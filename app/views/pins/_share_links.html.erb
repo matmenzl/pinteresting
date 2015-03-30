@@ -1,0 +1,24 @@
+<%= link_to "javascript:;", class: "email-share" do %>
+  <i class="fa fa-share-square"></i>
+  Share by Email
+<% end %>
+
+<%= form_tag share_pin_path(pin), remote: true, id: "email-pin", class: "hidden" do %>
+  <%= text_field_tag :email %>
+<% end %>
+<br>
+<a class="facebook" href="#" onclick="facebookShare()"><i class="fa fa-facebook-square"></i>Share</a>
+<!-- <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitter" data-count="none" data-url="<%= pin_url(pin) %>">Tweet</a> -->
+<!-- <br> -->
+<script type="text/javascript">
+  function facebookShare(){
+    FB.ui({
+      method: 'feed',
+      link: "<%= Rails.env == 'development' ? 'http://example.com/' : pin_url(pin) %>",
+      name: "<%= pin.description %>",
+      caption: 'Pinned to <%= pin.address %>',
+      description: 'Find more cool pins on deinenachbarn.ch !',
+      picture: "<%= pin.image.url unless Rails.env == 'development' %>"
+    }, function(response){});
+  }
+</script>

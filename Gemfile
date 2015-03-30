@@ -21,6 +21,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
 gem 'markable', github: "effektz/markable"
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem "blogit", '1.0.0.rc1'
 
 group :development, :test do 
 	gem 'sqlite3'

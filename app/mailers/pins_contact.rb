@@ -7,9 +7,9 @@ class PinsContact < ActionMailer::Base
     mail(to: recipient, subject: "New Question from Pinterest!", from: sender)
   end
 
-  def interest
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def share(sender, recipient, pin_id)
+    @pin = Pin.find(pin_id)
+    @sender = sender
+    mail(to: recipient, subject: "#{@sender.name} shared a pin with you!", from: @sender.email)
   end
 end

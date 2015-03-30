@@ -8,4 +8,4 @@
 
 <%= render 'map' if (user_signed_in? && params[:q].try(:[], :description_cont).nil?) %>
 
-<%= render "pins" %>
+<%= render "shared/pins", pins: @pins %>

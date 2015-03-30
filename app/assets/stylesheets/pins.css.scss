@@ -81,3 +81,19 @@
 #sidebar_builder label { 
   width: auto; display:inline; 
 } 
+
+.fa{
+  padding: 0.5em;
+}
+
+.facebook, .facebook:focus{
+  background: #3B5998; 
+  text-decoration: none;
+  padding: 0.5em;
+  color: #fff;
+  font-size: 12px;
+  &:hover{
+    color: #eee;
+    text-decoration: none;
+  }
+}

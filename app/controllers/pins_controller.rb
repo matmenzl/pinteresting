@@ -54,6 +54,11 @@ class PinsController < ApplicationController
     redirect_to root_path
   end
 
+  def share
+    PinsContact.share(current_user, params[:email], params[:id]).deliver
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
@@ -71,6 +76,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description, :image, :address)
+      params.require(:pin).permit(:description, :image, :address, :status)
     end
 end

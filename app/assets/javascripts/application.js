@@ -19,4 +19,5 @@
 //= require underscore
 //= require underscore
 //= require gmaps/google
+//= require plugins/sweet-alert.min
 //= require_tree .

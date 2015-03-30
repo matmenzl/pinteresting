@@ -11,20 +11,24 @@
        <p><%= @pin.description %></p>
        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
        <p><%= @pin.address %></p>
+       <p><%= @pin.status.capitalize if @pin.offer? %></p>
+      <% if @pin.user == current_user %>
+        <%= link_to edit_pin_path(@pin) do %>
+          <span class="glyphicon glyphicon-edit"></span>
+          Edit
+        <% end %>
+      <% else %>
        <%= link_to contact_path(@pin.id) do %>
          <span class="glyphicon glyphicon-envelope" title="Email"></span>
        <% end %>
        <%= link_to "sms:#{@pin.user.phone}" do %>
          <span class="glyphicon glyphicon-comment" title="SMS"></span>
        <% end %>
-       <% if @pin.user == current_user %>
-         <%= link_to edit_pin_path(@pin) do %>
-          	<span class="glyphicon glyphicon-edit"></span>
-          	Edit
-        	<% end %>
-        <% end %>
+      <% end %>
+      <br>
+      <br>
+      <%= render "share_links", pin: @pin %>
      </div>
    </div>
  </div>
 </div>
-
