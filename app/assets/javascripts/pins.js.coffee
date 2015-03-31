@@ -19,6 +19,29 @@ $ ->
     $("form#search-form input").attr("name", "search")
     $("form#search-form input").attr("placeholder", "E.g. 'Eiffel Tower, Paris, FR'")
 
+  $(".email-share").click ->
+    swal
+      title: "Share this pin!"
+      text: "Type users email to send him this pin details:"
+      type: "input"
+      showCancelButton: true
+      closeOnConfirm: false
+      animation: "slide-from-top"
+    , (inputValue) ->
+      return false  if inputValue is false
+      if inputValue is ""
+        swal.showInputError "You need to write an email address!"
+        return false
+      swal "Nice!", "This pin details will be sent to: " + inputValue + ". \n Thank You for using deinenachbarn.ch!", "success"
+      $("form#email-pin input#email").val(inputValue)
+      $("form#email-pin").submit()
+
+  $("#pin-type select").change ->
+    if this.value is "Offer"
+      $("#pin-status").removeClass("hidden")
+    else
+      $("#pin-status").addClass("hidden")
+
   createSidebarLi = (json) ->
     "<li><a>" + json.name + "</a></li>"
   bindLiToMarker = ($li, marker) ->

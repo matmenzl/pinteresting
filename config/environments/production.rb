@@ -75,7 +75,7 @@ Rails.application.configure do
 
   # Required for Heroku
   # set this to the actual host
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'nachbarer.herokuapp.com' }
 
 
   # Do not dump schema after migrations.

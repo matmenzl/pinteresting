@@ -19,5 +19,13 @@ class Pin < ActiveRecord::Base
     #{description}<br>
     <strong>#{user.name}</strong>"
   end
+
+  def offer?
+    marked_as? :offer
+  end
+
+  def request?
+    marked_as? :request
+  end
 end
 

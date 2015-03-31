@@ -11,9 +11,14 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="form-group" id="pin-type">
     <%= label_tag :pin_type %>
     <%= select_tag :pin_type, options_for_select(["Offer", "Request"]), class: "form-control" %>
+  </div>
+
+  <div class="form-group" id="pin-status">
+    <%= label_tag :status %>
+    <%= f.select :status, options_for_select(["Available", "Rented"]), {}, class: "form-control" %>
   </div>
 
   <div class="form-group">
