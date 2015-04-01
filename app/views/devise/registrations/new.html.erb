@@ -27,8 +27,14 @@
 		  </div>
 
 		  <div class="form-group">
+		  	<%= check_box_tag 't_and_c' %>
+		  	I have read and agree to the <a data-toggle="modal" href="#t_c_modal">Terms & Conditions</a>.
+		  </div>
+
+		  <div class="form-group">
 		  	<%= f.submit "Sign up", class: "btn btn-primary" %>
 		  </div>
+
 		<% end %>
 	</div>
 	<div class="panel-footer">

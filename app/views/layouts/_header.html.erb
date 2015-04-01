@@ -19,10 +19,10 @@
         <% if user_signed_in? %>
           <li>
             <button type="button" class="btn btn-default navbar-btn">
-            <%= link_to new_pin_path do %>
-              <span class="glyphicon glyphicon-plus"></span> New Pin
-              </button>
-            <% end %>
+              <%= link_to new_pin_path do %>
+                  <span class="glyphicon glyphicon-plus"></span> New Pin
+              <% end %>
+            </button>
           </li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li> 

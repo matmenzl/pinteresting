@@ -60,7 +60,6 @@ $ ->
     internal:
       id: "sidebar_builder"
   , ->
-    console.log map_markers
     markers = handler.addMarkers(map_markers)
 
     # createSidebar json_array
