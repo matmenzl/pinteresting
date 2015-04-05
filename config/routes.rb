@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :pins
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
+
   root "pins#index"
 
   get "about" => "pages#about"

@@ -2,24 +2,16 @@
   <div class="container">
     <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="col-sm-8 col-md-8">
-      
-        <%= form_tag pins_path, method: :get, class: "navbar-form", id: "search-form" do %>
-          <div class="btn-group">
-            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type='button' aria-expanded="true"><span class="selection">Search by Location:</span> <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role='presentation'><a role="menuitem" tabindex="-1" href="#" id="location-search"><strong>Search by Location</strong></a></li>
-              <li role='presentation'><a role="menuitem" tabindex="-1" href="#" id="full-text-search"><strong>Full-Text Search</strong></a></li>
-            </ul>
-          </div>
+        <%= search_form_for @q, method: :get, class: "navbar-form" do |f| %>
           <div class="input-group">
-              <%= text_field_tag :search, "", class: "form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
-              <div class="input-group-btn">
-                <%= button_tag class: "btn-success btn", type: "submit" do %>
-                  <span class="glyphicon glyphicon-search"></span>
-                <% end %>
-              </div>
+            <%= f.text_field :description_cont, class: "form-control", placeholder: "E.g. 'Car Rent'" %>
+            <div class="input-group-btn">
+              <%= button_tag class: "btn btn-default", type: "submit" do %>
+                <i class="glyphicon glyphicon-search"></i>
+              <% end %>
+            </div>
           </div>
-        <% end %>
+        <% end %>        
       </div>
 
       <div class="col-sm-3 col-md-3 col-offset-1">

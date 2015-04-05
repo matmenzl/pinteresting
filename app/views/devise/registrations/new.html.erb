@@ -17,6 +17,11 @@
 		  </div>
 
 		  <div class="form-group">
+		  	<%= f.label :zip %> <i>Please enter your zip code to find Pins near you!</i>
+		  	<%= f.text_field :zip, autofocus: true, class: "form-control", required: true %>
+		  </div>
+
+		  <div class="form-group">
 		  	<%= f.label :email %> <i>Your e-mail won't be public, you get contacted with a contact-form</i>
 		  	<%= f.email_field :email, autofocus: true, class: "form-control" %>
 		  </div>
@@ -27,8 +32,14 @@
 		  </div>
 
 		  <div class="form-group">
+		  	<%= check_box_tag 't_and_c' %>
+		  	I have read and agree to the <a data-toggle="modal" href="#t_c_modal">Terms & Conditions</a>.
+		  </div>
+
+		  <div class="form-group">
 		  	<%= f.submit "Sign up", class: "btn btn-primary" %>
 		  </div>
+
 		<% end %>
 	</div>
 	<div class="panel-footer">

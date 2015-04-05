@@ -9,19 +9,18 @@ class User < ActiveRecord::Base
 
   has_many :pins
 
-  validates :name, presence: true
+  validates_presence_of :name, :zip
 
   after_create :send_notification
 
-  geocoded_by :address
-  after_validation :geocode 
+  geocoded_by :zip
+  after_validation :geocode
 
   def send_notification
   	AdminMailer.new_user(self).deliver
   end
 
-  def build_markers(location = nil)
-    pins = Pin.near(address.blank? ? location : address)
+  def build_markers pins
     markers = Gmaps4rails.build_markers(pins) do |pin, marker|
       marker.lat pin.latitude
       marker.lng pin.longitude

@@ -6,7 +6,8 @@ class Pin < ActiveRecord::Base
 	validates :image, presence: true
 
   geocoded_by :address
-  after_validation :geocode 
+  after_validation :geocode
+  after_create :set_zip
 
   markable_as :offer, :request
 
@@ -26,6 +27,10 @@ class Pin < ActiveRecord::Base
 
   def request?
     marked_as? :request
+  end
+
+  def set_zip
+    update_attributes(zip: Geocoder.search("#{latitude}, #{longitude}").first.postal_code)
   end
 end
 

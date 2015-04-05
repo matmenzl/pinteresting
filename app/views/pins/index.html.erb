@@ -4,8 +4,8 @@
 
 <%= render 'pages/home' unless user_signed_in? %>
 
-<%= render 'search_menu' %>
+<%= render 'search_menu' if user_signed_in? %>
 
-<%= render 'map' if (user_signed_in? && params[:q].try(:[], :description_cont).nil?) %>
+<%= render 'map' if (user_signed_in? && @pins.any?) %>
 
 <%= render "shared/pins", pins: @pins %>
