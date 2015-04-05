@@ -17,7 +17,7 @@
       link: "<%= Rails.env == 'development' ? 'http://example.com/' : pin_url(pin) %>",
       name: "<%= pin.description %>",
       caption: 'Pinned to <%= pin.address %>',
-      description: 'Find more cool pins on deinenachbarn.ch !',
+      description: 'Find more cool pins on meinenachbarn.ch !',
       picture: "<%= pin.image.url unless Rails.env == 'development' %>"
     }, function(response){});
   }

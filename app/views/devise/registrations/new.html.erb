@@ -12,12 +12,12 @@
 		  </div>
 
 		  <div class="form-group">
-		  	<%= f.label :address %> <i>Only publish your city and neighbourhood, not your street-adress due to privacy- and safety-issues</i>
+		  	<%= f.label :address %> <i>Your address will stay private.</i>
 		  	<%= f.text_field :address, autofocus: true, class: "form-control" %>
 		  </div>
 
 		  <div class="form-group">
-		  	<%= f.label :zip %> <i>Please enter your zip code to find Pins near you!</i>
+		  	<%= f.label :zip %> <i>Please enter your zip code. meinenachbarn.ch shows you pins based on your zip-code</i>
 		  	<%= f.text_field :zip, autofocus: true, class: "form-control", required: true %>
 		  </div>
 

@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
       marker.picture({
               :picture => pin.image.url,
               :width   => 32,
-              :height  => 32
+              :height  => 60
              })
       marker.title pin.user.name
       marker.infowindow pin.gmaps_infowindow

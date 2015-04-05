@@ -1,5 +1,5 @@
 class AdminMailer < ActionMailer::Base
-  default from: "noreply@meetyourstreet.com"
+  default from: "noreply@meinenachbarn.ch"
   default to: "mathias.menzl@gmail.com"
 
 	def new_user(user)

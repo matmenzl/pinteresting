@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   # Check if user has permission to see the pin (by location)
   def validate_location
     unless Pin.find(params[:id]).zip == current_user.zip
-      flash[:notice] = "Sorry, you don't have permission to see this pin!"
+      flash[:notice] = "Sorry, but this pin isn't located in your area!"
       redirect_to root_path
     end
   end
