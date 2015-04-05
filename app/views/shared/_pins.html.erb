@@ -1,5 +1,5 @@
-<div id="pins" class="transitions-enabled">
-  <% if pins.any? %>
+<% if pins.any? %>
+  <div id="pins" class="transitions-enabled">
     <% pins.each do |pin| %>
       <div class="box panel panel-default">
         <div id="some-div" data-no-turbolink>
@@ -24,16 +24,16 @@
         </div>
       </div>
     <% end %>
-  <% else %>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h3>We don't have any results for <%= params[:q] ? params[:q][:description_cont] : params[:search] %></h3>
-        </div>
+  </div>
+<% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h3>We don't have any results for <%= (params[:q] ? params[:q][:description_cont] : params[:search]) || "you here yet, sorry" %>.</h3>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <div class="center">
    <%= will_paginate pins, renderer: BootstrapPagination::Rails %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330154703) do
+ActiveRecord::Schema.define(version: 20150405091606) do
 
   create_table "blogit_comments", force: true do |t|
     t.string   "name",       null: false
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150330154703) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "status",             default: "available"
+    t.string   "zip"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
@@ -89,6 +90,7 @@ ActiveRecord::Schema.define(version: 20150330154703) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "zip"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

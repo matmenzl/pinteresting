@@ -29,6 +29,13 @@
         <%= f.text_field :address, class: "form-control", :autofocus => true %>
       </div>
 
+      <% unless action_name == "edit" %>
+        <div class="form-group">
+          <%= f.label :zip %> <i>Please enter your zip code to find Pins near you!</i>
+          <%= f.text_field :zip, autofocus: true, class: "form-control" %>
+        </div>
+      <% end %>
+
       <div class="form-group">
         <%= f.label :phone, "Phone Number" %> <i>Publish your Phone-Number that your neighbours can reach you faster, you don't have to</i>
         <%= f.text_field :phone, class: "form-control", :autofocus => true %>

@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
+<%= link_to 'Destroy', pin_path(@pin), method: :delete, data: {confirm: "Are you sure? This action can not be undone!"} %>

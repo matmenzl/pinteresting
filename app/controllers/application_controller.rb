@@ -8,8 +8,15 @@ class ApplicationController < ActionController::Base
  protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:name, :address]
+    devise_parameter_sanitizer.for(:sign_up) << [:name, :address, :zip]
     devise_parameter_sanitizer.for(:account_update) << [:name, :address, :phone]
   end
 
+  # Check if user has permission to see the pin (by location)
+  def validate_location
+    unless Pin.find(params[:id]).zip == current_user.zip
+      flash[:notice] = "Sorry, you don't have permission to see this pin!"
+      redirect_to root_path
+    end
+  end
 end
