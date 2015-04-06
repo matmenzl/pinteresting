@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   acts_as_marker
 
-  has_many :pins
+  has_many :pins, dependent: :destroy
 
   validates_presence_of :name, :zip
 
