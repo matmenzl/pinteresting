@@ -9,9 +9,9 @@
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-8">
-                <h1>deinenachbarn.ch</h1>
-                <p>A neighbourhood platform to connect, share and organize your daily life.</p>
-                <%= link_to "Browse Pins", root_path, class: "btn btn-primary btn-lg" %>
+                <h1><%= t "about.brand" %></h1>
+                <p><%= t "about.brand_caption" %></p>
+                <%= link_to t("about.browse_pins"), root_path, class: "btn btn-primary btn-lg" %>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="well text-center">
-                    <h1>When neighbours meet good things can happen</h1>
+                    <h1><%= t "about.meetup" %></h1>
 
                 </div>
             </div>
@@ -35,20 +35,20 @@
         <div class="row">
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-home"></span>
-				<p>deinenachbarn.ch is a neighbourhood-network where you can connect with your neighbours and share. Registration on deinenachbarn.ch is free of charge. No strings attached.</p>
-                <a class="btn btn-default" href="#">More Info</a>
+				<p><%= t "about.caption1" %></p>
+                <a class="btn btn-default" href="#"><%= t "about.more_info" %></a>
             </div>
             <!-- /.col-md-4 -->
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span>
-                <p>If you need a drilling machine or a screwdriver if you want to sell your bike or are looking for cat-sitter while you're on vacation, then connect with your neighbours on deinenachbarn.ch and make it happen by posting it with a pin. </p>
-                <a class="btn btn-default" href="#">More Info</a>
+                <p><%= t "about.caption2" %></p>
+                <a class="btn btn-default" href="#"><%= t "about.more_info" %></a>
             </div>
             <!-- /.col-md-4 -->
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span>
-                <p>In neighbourhoods safety and privacy is important. So be thoughtful what you post online and behave. Connect with your real name and adress, otherwise your neighbours won't recognize you (you wouldn't walk around your neighbourhood with a basket on your head, unless you want to robb a bank, right?)</p>
-                <a class="btn btn-default" href="#">More Info</a>
+                <p><%= t "about.caption3" %></p>
+                <a class="btn btn-default" href="#"><%= t "about.more_info" %></a>
             </div>
             <!-- /.col-md-4 -->
         </div>

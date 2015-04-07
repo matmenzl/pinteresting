@@ -13,12 +13,12 @@
 
   <div class="form-group" id="pin-type">
     <%= label_tag :pin_type %>
-    <%= select_tag :pin_type, options_for_select(["Offer", "Request"]), class: "form-control" %>
+    <%= select_tag :pin_type, options_for_select([t("pins.offer"), t("pins.request")]), class: "form-control" %>
   </div>
 
   <div class="form-group" id="pin-status">
     <%= label_tag :status %>
-    <%= f.select :status, options_for_select(["Available", "Rented"]), {}, class: "form-control" %>
+    <%= f.select :status, options_for_select([t("pins.available"), t("pins.rented")]), {}, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -33,7 +33,7 @@
 
   <div class="form-group">
     <%= f.label :address %>
-    <%= f.text_field :address, class: "form-control", placeholder: "E.g. 'Eiffel Tower, Paris, FR'" %>
+    <%= f.text_field :address, class: "form-control", placeholder: t("pins.location_example") %>
   </div>
 
   <div class="form-group">
