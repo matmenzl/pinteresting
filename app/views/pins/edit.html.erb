@@ -1,6 +1,6 @@
-<h1>Editing pin</h1>
+<h1><%= t "pins.edit" %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Destroy', pin_path(@pin), method: :delete, data: {confirm: "Are you sure? This action can not be undone!"} %>
+<%= link_to t("pins.show"), @pin %> |
+<%= link_to t("pins.destroy"), pin_path(@pin), method: :delete, data: {confirm: t("pins.deletion_confirm") } %>

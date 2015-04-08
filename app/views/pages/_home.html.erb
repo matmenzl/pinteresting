@@ -3,10 +3,10 @@
 	<%= image_tag("", alt: "") %>
 
 
-     <h1>Welcome to your neighbourhood!</h1>
+     <h1><%= t "landing.welcome" %></h1>
        <p>
-         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+         <%= link_to t("landing.buttons.login"), new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to t("landing.buttons.signup"), new_user_registration_path, class: "btn btn-primary btn-lg" %>
        </p>
 
 <br>
@@ -14,9 +14,7 @@
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
         <p>
-          <span style="font-size:3.0em;" class="glyphicon glyphicon-home"></span><h4>
-meinenachbarn.ch is a <b>neighbourhood-network</b> where you can rent, sell or share things with pins. Everything<b>Environmentally sustainable</b> because you do it in your neighbourhood.</h4>
-
+          <span style="font-size:3.0em;" class="glyphicon glyphicon-home"></span><h4><%== t "landing.caption1" %></h4>
         </p>
       </div>
     </div>
@@ -24,8 +22,7 @@ meinenachbarn.ch is a <b>neighbourhood-network</b> where you can rent, sell or s
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
         <p>
-<span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span><h4>
-You need a garden-hose or a dog-sitter, post a pin here and make it happen in your neighbourhood - <b>free of charge!</b> and <b>environmentally sustainable</b>. Your pins are only visible for your neighbours. </h4>
+<span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span><h4><%== t "landing.caption2" %></h4>
         </p>
       </div>
     </div>
@@ -33,8 +30,7 @@ You need a garden-hose or a dog-sitter, post a pin here and make it happen in yo
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
         <p>
-<span style="font-size:3.0em;" class="glyphicon glyphicon-user"></span> <h4>
-<b>Safety & privacy first</b>. Your pins are only visible in your neighbourhood (zip-code). Your E-mail-address is private. Connection is based on a <b>secure contact-form</b>.</h4>
+<span style="font-size:3.0em;" class="glyphicon glyphicon-user"></span> <h4><%== t "landing.caption3" %></h4>
         </p>
       </div>
     </div>

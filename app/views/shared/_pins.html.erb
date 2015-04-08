@@ -29,7 +29,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h3>We don't have any results for <%= (params[:q] ? params[:q][:description_cont] : params[:search]) || "you here yet, sorry" %>.</h3>
+        <h3><%= t "pins.no_result" %> <%= (params[:q] ? params[:q][:description_cont] : params[:search]) || t("pins.no_search") %>.</h3>
       </div>
     </div>
   </div>

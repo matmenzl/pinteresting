@@ -1,14 +1,14 @@
 <%= link_to "javascript:;", class: "email-share" do %>
   <i class="fa fa-share-square"></i>
-  Share by Email
+  <%= t "pins.share.email" %>
 <% end %>
 
 <%= form_tag share_pin_path(pin), remote: true, id: "email-pin", class: "hidden" do %>
   <%= text_field_tag :email %>
 <% end %>
 <br>
-<a class="facebook" href="#" onclick="facebookShare()"><i class="fa fa-facebook-square"></i>Share</a>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="meine_nachbarn" data-count="none" data-url="<%= pin_url(pin) %>">Tweet</a>
+<a class="facebook" href="#" onclick="facebookShare()"><i class="fa fa-facebook-square"></i><%= t "pins.share.fb" %></a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="meine_nachbarn" data-count="none" data-url="<%= pin_url(pin) %>"><%= t "pins.share.twitter" %></a>
 <!-- <br> -->
 <script type="text/javascript">
   function facebookShare(){
