@@ -1,0 +1,75 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+de:
+  header:
+    brand: "meinenachbarn.ch"
+    links:
+      home: "Home"
+      about: "Über"
+      new_pin: "Neuer Eintrag"
+      edit_account: "Profil"
+      logout: "Abmelden"
+      login: "Anmelden"
+  landing:
+    welcome: "Willkommen in deinem Quartier!"
+    buttons:
+      login: "Anmelden"
+      signup: "Registrieren"
+    caption1: "meinenachbarn.ch ist eine Nachbarschaftsplattform, um sich kennen zu lernen und den Alltag zu organisieren. Nachhaltigkeit ist uns wichtig, darum beschränkt sich alles auf dein Quartier."
+    caption2: "Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, dann erstelle einen Eintrag auf meinenachbarn.ch - <b>kostenlos</b> und <b>ökologisch nachhaltig</b>. Dein Eintrag ist nur für deine Nachbarn zu sehen."
+    caption3: "<b>Sicherheit und Privatsphäre sind uns wichtig</b>. Deine Einträge sind nur in deiner Nachbarschaft zu sehen (Postleitzahl). Deine E-mail-Adresse bleibt privat. Kontakt wird mit einem <b>Online-Formular</b> hergestellt."
+  footer:
+    t_and_c: "Allgemeine Geschäftsbedingungen"
+  about:
+    brand: "meinenachbarn.ch"
+    brand_caption: "Eine Nachbarschaftsplattform, um sich kennen zu lernen, zu teilen und den Alltag zu organisieren."
+    browse_pins: "Einträge durchsuchen"
+    meetup: "When neighbours meet good things can happen"
+    caption1: "meinenachbarn.ch ist eine Nachbarschaftsplattform, um sich kennen zu lernen und den Alltag zu organisieren. Nachhaltigkeit ist uns wichtig, darum beschränkt sich alles auf dein Quartier."
+    caption2: "Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, dann erstelle einen Eintrag auf meinenachbarn.ch - <b>kostenlos</b> und <b>ökologisch nachhaltig</b>. Dein Eintrag ist nur für deine Nachbarn zu sehen."
+    caption3: "<b>Sicherheit und Privatsphäre sind uns wichtig</b>. Deine Einträge sind nur in deiner Nachbarschaft zu sehen (Postleitzahl). Deine E-mail-Adresse bleibt privat. Kontakt wird mit einem <b>Online-Formular</b> hergestellt."
+    more_info: "Mehr Informationen"
+  pins:
+    my: "Meine Einträge:"
+    offer: "Angebot"
+    offers: "Angebote"
+    request: "Gesuch"
+    requests: "Gesuche"
+    available: "Erhältlich"
+    rented: "Ausgelehnt"
+    location_example: "Zürich, Schweiz"
+    full_text_example: "Gartenschlauch"
+    map: "Einträge in deiner Nachbarschaft:"
+    filter: "Filtern nach Angebots-Typ"
+    share:
+      email: "Share E-mail"
+      fb: "Share"
+      twitter: "Tweet"
+    edit: "Eintrag bearbeiten"
+    show: "Anzeigen"
+    new: "Neuer Eintrag"
+    destroy: "Löschen"
+    deletion_confirm: "Bist du sicher? Das kann nicht rückgängig gemacht werden!"
+    back: "Zurück"
+    no_result: "Wir haben kein Resultat für"
+    no_search: "you here yet, sorry"
+    close: "Schliessen"
