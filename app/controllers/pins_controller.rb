@@ -15,6 +15,7 @@ class PinsController < ApplicationController
     end
     build_map @pins
     @pins = @pins.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @location = Geocoder.search("#{current_user.latitude}, #{current_user.longitude}").first.data["formatted_address"] if user_signed_in? && @pins.empty? && params[:q].nil?
   end
 
   def show
