@@ -70,6 +70,6 @@ en:
     destroy: "Destroy"
     deletion_confirm: "Are you sure? This action can not be undone!"
     back: "Back"
-    no_result: "We don't have any results for"
-    no_search: "you here yet, sorry"
+    no_result: "You are visiting from '%{location}'. Unfortunately no one has put an offer or request online yet for this area.<br> Start with a first offer/request yourself and post a <a href='pins/new'>pin</a>!"
+    no_search: "We don't have any results for '%{search_term}' in your are yet.<br> Start with a first '%{search_term}' offer/request yourself and post a <a href='pins/new'>pin</a>!"
     close: "Close"
