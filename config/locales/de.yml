@@ -70,6 +70,6 @@ de:
     destroy: "Löschen"
     deletion_confirm: "Bist du sicher? Das kann nicht rückgängig gemacht werden!"
     back: "Zurück"
-    no_result: "Wir haben kein Resultat für"
-    no_search: "you here yet, sorry"
+    no_result: "Wir haben kein Eintrag für"
+    no_search: "dich und deine Nachbarschaft bis jetzt, sorry"
     close: "Schliessen"
