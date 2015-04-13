@@ -1,14 +1,14 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :populate_pins, only: :index
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
   before_action :validate_location, only: [:show, :edit, :update]
 
   def index
-    @q = user_signed_in? ? Pin.where(zip: current_user.zip).ransack(params[:q]) : Pin.ransack(params[:q])
-
     if params[:filter]
-      @pins = Pin.where(zip: current_user.zip).marked_as(params[:filter].downcase.to_sym)
+      @pins = current_user.address.empty? ? Pin.where(zip: current_user.zip) : Pin.near(current_user.address, 1)
+      @pins = @pins.marked_as(params[:filter].downcase.to_sym)
     else
       # @pins = params[:search] ? Pin.near(current_user.zip).search(params[:search]) : @q.result(distinct: true)
       @pins = @q.result(distinct: true)
@@ -75,6 +75,14 @@ class PinsController < ApplicationController
 
     def build_map pins
       @markers = current_user.build_markers(pins) if current_user
+    end
+
+    def populate_pins
+      if user_signed_in?
+        @q = current_user.address.empty? ? Pin.where(zip: current_user.zip).ransack(params[:q]) : Pin.near(current_user.address, 1).ransack(params[:q])
+      else
+        @q = Pin.ransack(params[:q])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -9,11 +9,11 @@ class User < ActiveRecord::Base
 
   has_many :pins, dependent: :destroy
 
-  validates_presence_of :name, :zip
+  validates_presence_of :name, :zip, :address
 
   after_create :send_notification
 
-  geocoded_by :zip
+  geocoded_by :geocoder_param
   after_validation :geocode
 
   def send_notification
@@ -32,5 +32,9 @@ class User < ActiveRecord::Base
       marker.title pin.user.name
       marker.infowindow pin.gmaps_infowindow
     end
+  end
+
+  def geocoder_param
+    address.empty? ? zip : address
   end
 end

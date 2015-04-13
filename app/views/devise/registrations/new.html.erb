@@ -8,12 +8,12 @@
 
   		<div class="form-group">
 		  	<%= f.label :name %> <i>You will be visibly with this name</i>
-		  	<%= f.text_field :name, autofocus: true, class: "form-control" %>
+		  	<%= f.text_field :name, autofocus: true, class: "form-control", required: true  %>
 		  </div>
 
 		  <div class="form-group">
 		  	<%= f.label :address %> <i>Your address will stay private.</i>
-		  	<%= f.text_field :address, autofocus: true, class: "form-control" %>
+		  	<%= f.text_field :address, autofocus: true, class: "form-control", required: true  %>
 		  </div>
 
 		  <div class="form-group">
