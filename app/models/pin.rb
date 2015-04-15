@@ -37,5 +37,9 @@ class Pin < ActiveRecord::Base
   def address
     user.address
   end
+
+  def is_near? user
+    Pin.near(user.address, 1).include? self
+  end
 end
 

@@ -9,12 +9,14 @@ class User < ActiveRecord::Base
 
   has_many :pins, dependent: :destroy
 
-  validates_presence_of :name, :zip, :address
+  validates_presence_of :name, :zip, :street, :city, :country
 
   after_create :send_notification
 
   geocoded_by :geocoder_param
   after_validation :geocode
+
+  after_create :make_address
 
   def send_notification
   	AdminMailer.new_user(self).deliver
@@ -35,6 +37,10 @@ class User < ActiveRecord::Base
   end
 
   def geocoder_param
-    address.empty? ? zip : address
+    "#{street}, #{city}, #{country}"
+  end
+
+  def make_address
+    update_attributes(address: "#{street}, #{city}, #{country}")
   end
 end
