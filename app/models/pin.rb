@@ -31,7 +31,7 @@ class Pin < ActiveRecord::Base
   end
 
   def set_zip
-    update_attributes(zip: Geocoder.search("#{latitude}, #{longitude}").first.postal_code)
+    update_attributes(zip: Geocoder.search("#{latitude}, #{longitude}").first.try(:postal_code))
   end
 
   def address
