@@ -1,25 +1,111 @@
+<!-- new about -->
+
 
 <!-- Page Content -->
     <div class="container">
 
-        <!-- Heading Row -->
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1><%= t "about.brand" %></h1>
+                <p><%= t "about.brand_caption" %></p>
+                <%= link_to t("about.browse_pins"), root_path, class: "btn btn-primary btn-lg" %>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>4 Reasons why you should join deinenachbarn.ch?</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://s3.amazonaws.com/nachbarer1/images/organize.png" alt="">
+                    <div class="caption">
+                        <h3>Reason 1: Simplicity</h3>
+                        <p>deinenachbarn.ch is a no-bullshit-platform. We're free of charge, safe and don't rip you off. We do want to give you a tool to organize your daily life with your neighbours. Nothing else.</p>
+                        <!--<p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://s3.amazonaws.com/nachbarer1/images/restaurant_people.png" alt="">
+                    <div class="caption">
+                        <h3>Reason 2: Closed Network</h3>
+                        <p>You register with your real name and adress and get access to your neighbourhood based on your adress you register with. Only users within your neighbourhood can see and access your offers/requests.</p>
+                        <p>
+                            <!--<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://s3.amazonaws.com/nachbarer1/images/environment.png" alt="">
+                    <div class="caption">
+                        <h3>Reason 3: Environment</h3>
+                        <p>You probably know a lot of websites for exchanging items and renting stuff. But all act as if you had a car and plenty of time getting things from place A to B and back. But they neglect, that this needs time, money and is actually not at all environmentally sustainable. That's why we built this.</p>
+                        <p>
+                            <!--<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="https://s3.amazonaws.com/nachbarer1/images/happy.png" alt="">
+                    <div class="caption">
+                        <h3>Reason 4: Easy & happy</h3>
+                        <p>It really makes your life easier when you know your neighbours and can get things done quickly. It makes you happier when you get to know who lives nearby in the same street. It's a good thing when neighbours meet.</p>
+                        <p>
+                            <!--<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+
+        
+
+<!-- old About -->
+
+<!-- Page Content 
+    <div class="container">
+
+        <!-- Heading Row 
         <div class="row">
             <div class="col-md-4">
-                <!--<img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">-->
+                <!--<img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt=""
             </div>
-            <!-- /.col-md-8 -->
+            <!-- /.col-md-8 
             <div class="col-md-8">
                 <h1><%= t "about.brand" %></h1>
                 <p><%= t "about.brand_caption" %></p>
                 <%= link_to t("about.browse_pins"), root_path, class: "btn btn-primary btn-lg" %>
             </div>
-            <!-- /.col-md-4 -->
+            <!-- /.col-md-4 
         </div>
-        <!-- /.row -->
+        <!-- /.row 
 
         <hr>
 
-        <!-- Call to Action Well -->
+        <!-- Call to Action Well 
         <div class="row">
             <div class="col-lg-12">
                 <div class="well text-center">
@@ -31,20 +117,20 @@
         </div>
         <!-- /.row -->
 
-        <!-- Content Row -->
+        <!-- Content Row 
         <div class="row">
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-home"></span>
 				<p><%= t "about.caption1" %></p>
                 <a class="btn btn-default" href="#"><%= t "about.more_info" %></a>
             </div>
-            <!-- /.col-md-4 -->
+            <!-- /.col-md-4 
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span>
                 <p><%= t "about.caption2" %></p>
                 <a class="btn btn-default" href="#"><%= t "about.more_info" %></a>
             </div>
-            <!-- /.col-md-4 -->
+            <!-- /.col-md-4 
             <div class="col-md-4">
                 <span style="font-size:3.0em;" class="glyphicon glyphicon-comment"></span>
                 <p><%= t "about.caption3" %></p>
