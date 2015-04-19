@@ -24,7 +24,7 @@ en:
     brand: "meinenachbarn.ch"
     links:
       home: "Home"
-      about: "About"
+      about: "How To"
       new_pin: "New Pin"
       edit_account: "Account Settings"
       logout: "Log Out"
@@ -34,9 +34,9 @@ en:
     buttons:
       login: "Log In"
       signup: "Sign Up"
-    caption1: "meinenachbarn.ch is a <b>neighbourhood-network</b> where you can rent, sell or share things with pins. Everything is <b>Environmentally sustainable</b> because you do it in your neighbourhood."
-    caption2: "You need a garden-hose or a dog-sitter, post a pin here and make it happen in your neighbourhood - <b>free of charge!</b> and <b>environmentally sustainable</b>. Your pins are only visible for your neighbours."
-    caption3: "<b>Safety & privacy first</b>. Your pins are only visible in your neighbourhood (zip-code). Your E-mail-address is private. Connection is based on a <b>secure contact-form</b>."
+    caption1: "meinenachbarn.ch is a <b> closed neighbourhood-network</b>. Connect with your neighbours and organize your daily life."
+    caption2: "You need a garden-hose or a cat-sitter, post a pin here. <b>Free of charge!</b> and <b>environmentally sustainable</b>."
+    caption3: "<b>Safety & privacy first</b>. Your pins are only visible for your neighbours living nearby in your street."
   footer:
     t_and_c: "Terms & Conditions "
   about:
