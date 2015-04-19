@@ -91,4 +91,7 @@ Rails.application.configure do
     }
   }
 
+  config.to_prepare do
+    Devise::RegistrationsController.send(:include, DeviseRegistrationsControllerDecorator)
+  end
 end
