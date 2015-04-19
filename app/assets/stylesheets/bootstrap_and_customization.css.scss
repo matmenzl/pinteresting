@@ -6,7 +6,7 @@ $navbar-height: 45px;
 $navbar-default-bg: white;
 $navbar-default-brand-color: #0f9d58; /*old color #c0392b; */
 $brand-primary: #c0392b;
-$jumbotron-bg: white;
+/*$jumbotron-bg: white;*/
 
 
 @import "bootstrap-sprockets";
@@ -33,4 +33,10 @@ $jumbotron-bg: white;
 .jumbotron h1 {
 	color: #fffff0;
 	text-shadow: 5px 5px 5px #000000;
+}
+
+.jumbotron h2 {
+	text-shadow: 2px 2px 4px 
+	rgba(0, 0, 0, 0.6);
+	color: white
 }
