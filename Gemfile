@@ -22,6 +22,7 @@ gem 'markable', github: "effektz/markable"
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem "blogit", '1.0.0.rc1'
+gem 'intercom-rails'
 
 group :development, :test do 
 	gem 'sqlite3'
