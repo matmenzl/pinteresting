@@ -23,6 +23,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem "blogit", '1.0.0.rc1'
 gem 'intercom-rails'
+gem 'http_accept_language'
 
 group :development, :test do 
 	gem 'sqlite3'
