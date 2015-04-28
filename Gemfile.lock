@@ -104,6 +104,7 @@ GEM
     geocoder (1.2.7)
     gmaps4rails (2.1.2)
     hike (1.2.3)
+    http_accept_language (2.0.5)
     i18n (0.6.11)
     intercom-rails (0.2.28)
       activesupport (> 3.0)
@@ -215,6 +216,7 @@ DEPENDENCIES
   devise (~> 3.1.0.rc2)
   geocoder
   gmaps4rails
+  http_accept_language
   intercom-rails
   jbuilder (~> 2.0)
   jquery-rails
