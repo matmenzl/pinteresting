@@ -21,25 +21,38 @@
 
 de:
   header:
-    brand: "meinenachbarn.ch"
+    brand: "Meet Your Street"
     links:
-      home: "Home"
-      about: "How To"
+      home: "Startseite"
+      about: "Wie funktionierts?"
       new_pin: "Neuer Eintrag"
       edit_account: "Profil"
       logout: "Abmelden"
       login: "Anmelden"
   landing:
+    find: "Finde deine Nachbarn"
     welcome: "Willkommen in deinem Quartier!"
+    street: "Strasse und Nummer..."
+    city: "Stadt..."
+    country: "Land..."
     buttons:
+      find: "Suchen"
       login: "Anmelden"
       signup: "Registrieren"
-    caption1: "meinenachbarn.ch ist eine Nachbarschaftsplattform, um sich kennen zu lernen und den Alltag zu organisieren. Nachhaltigkeit ist uns wichtig, darum beschränkt sich alles auf dein Quartier."
-    caption2: "Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, dann erstelle einen Eintrag auf meinenachbarn.ch - <b>kostenlos</b> und <b>ökologisch nachhaltig</b>. Dein Eintrag ist nur für deine Nachbarn zu sehen."
-    caption3: "<b>Sicherheit und Privatsphäre sind uns wichtig</b>. Deine Einträge sind nur in deiner Nachbarschaft zu sehen (Postleitzahl). Deine E-mail-Adresse bleibt privat. Kontakt wird mit einem <b>Online-Formular</b> hergestellt."
+    caption1: "<p><b>Treffen & Organisieren</b></p><p>Meetyourstreet.ch ist eine Nachbarschafts-Plattform fürs einfache Kennenlernen, Austauschen, Verabreden, Organisieren.</p>"
+    caption2: "<p><b>Kostenlos & Ökologisch</b></p><p>Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, erstelle einen Eintrag auf meinenachbarn.ch</p>."
+    caption3: "<p><b>Sicher und Privat</b></p>.<p>Deine Einträge sind nur in deiner Nachbarschaft zu sehen, die E-mail-Adresse bleibt privat. Kontakt wird online hergestellt.</p>"
   footer:
     t_and_c: "Allgemeine Geschäftsbedingungen"
   about:
+    caption1title: "Einfach & Schnell"
+    caption1text: "meetyourstreet.ch ist eine 'no-bullshit-platform'. Kostenlos, sicher und ohne Haken. Wir möchten Dir ein digitales Angebot zur Verfügung stellen, um ein Alltag mit deinen Nachbarn optimal organisieren zu können. Nicht mehr und nicht weniger. Ob Du auf der Sucher nach Jogging-Kollegen bist, einen Gartenschlauch brauchst oder jemanden der deine Katze füttert. Alles ist möglich auf meetyourstreet.ch."
+    caption2title: "Sicher & Privat"
+    caption2text: "Deine Wohnadresse, mit der Du dich registriert, verbindet dich automatisch mit deinen Nachbarn. Nur deine Nachbarn sehen deine Angebote und Gesuche. Keine Sorgen: Leute, die sich mit der falschen Adresse registrieren möchten, können keinen Schaden anrichten. Deine Informationen bleiben privat, bis du dich zur Kontaktaufnahme mit einem anderen Mitglied entscheidest. Wenn Du mit einem anderen Mitglied keinen Kontakt haben möchtest, ignoriere ihn oder sie einfach."
+    caption3title: "Umweltfreundlich & Kostenlos"
+    caption3text: "Du kennst wahrscheinlich viele andere Plattformen, auf denen du Dinge tauschen oder kaufen kannst. Der Vorteil von meetyourstreet.ch ist, dass du das alles mit deinen Nachbarn machen kannst, also keine Transportkosten und andere Umtriebe hast, die Zeit in Anspruch nehmen und Kosten verursachen. meetyourstreet.ch ist ökologisch nachhaltig und fördert das soziale Zusammenleben in der eigenen Nachbarschaft."
+    caption4title: "Sozial & Glücklich"
+    caption4text: "Es macht dein Leben einfacher, wenn Du deine Nachbarn kennst. Es macht dich glücklicher, wenn du alles in deinem Quartier erledigen kannst. Es stärk das soziale Zusammenleben, eröffnet neue Möglichkeiten und hilft dir im Alltag."
     brand: "meinenachbarn.ch"
     brand_caption: "Eine Nachbarschaftsplattform, um sich kennen zu lernen, zu teilen und den Alltag zu organisieren."
     browse_pins: "Einträge durchsuchen"
