@@ -39,12 +39,13 @@ de:
       find: "Suchen"
       login: "Anmelden"
       signup: "Registrieren"
-    caption1: "<p><b>Treffen & Organisieren</b></p><p>Meetyourstreet.ch ist eine Nachbarschafts-Plattform fürs einfache Kennenlernen, Austauschen, Verabreden, Organisieren.</p>"
-    caption2: "<p><b>Kostenlos & Ökologisch</b></p><p>Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, erstelle einen Eintrag auf meinenachbarn.ch</p>."
-    caption3: "<p><b>Sicher und Privat</b></p>.<p>Deine Einträge sind nur in deiner Nachbarschaft zu sehen, die E-mail-Adresse bleibt privat. Kontakt wird online hergestellt.</p>"
+    caption1: "<p><b>Treffen & Organisieren</b></p><p>Meet Your Street ist eine Nachbarschafts-Plattform fürs einfache Kennenlernen, Austauschen, Verabreden, Organisieren.</p>"
+    caption2: "<p><b>Kostenlos & Ökologisch</b></p><p>Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, erstelle einen Eintrag auf Meet Your Street</p>"
+    caption3: "<p><b>Sicher und Privat</b></p><p>Deine Einträge sind nur in deiner Nachbarschaft zu sehen, die E-mail-Adresse bleibt privat. Kontakt wird online hergestellt.</p>"
   footer:
     t_and_c: "Allgemeine Geschäftsbedingungen"
   about:
+    reasons: "4 Gründe für Meet Your Street"
     caption1title: "Einfach & Schnell"
     caption1text: "meetyourstreet.ch ist eine 'no-bullshit-platform'. Kostenlos, sicher und ohne Haken. Wir möchten Dir ein digitales Angebot zur Verfügung stellen, um ein Alltag mit deinen Nachbarn optimal organisieren zu können. Nicht mehr und nicht weniger. Ob Du auf der Sucher nach Jogging-Kollegen bist, einen Gartenschlauch brauchst oder jemanden der deine Katze füttert. Alles ist möglich auf meetyourstreet.ch."
     caption2title: "Sicher & Privat"

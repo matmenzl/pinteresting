@@ -36,6 +36,7 @@ en:
     city: "City..."
     country: "Country..."
     buttons:
+      find: "find"
       login: "Log In"
       signup: "Sign Up"
     caption1: "meinenachbarn.ch is a <b> closed neighbourhood-network</b>. Connect with your neighbours and organize your daily life."
@@ -44,6 +45,7 @@ en:
   footer:
     t_and_c: "Terms & Conditions "
   about:
+    reasons: "4 Reasons why you should join Meet Your Street"
     caption1title: "Simplicity"
     caption1text: "deinenachbarn.ch is a no-bullshit-platform. We're free of charge, safe and don't rip you off. We do want to give you a tool to organize your daily life with your neighbours. Nothing else. Either if you look for a garden hose or a cat sitter, or if you look for jogging-mates. Everything is possible here."
     caption2title: "Closed Network"
