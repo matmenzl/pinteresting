@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
   after_create :make_address
+  after_create :notify_neighbours
 
   def send_notification
   	AdminMailer.new_user(self).deliver
@@ -42,5 +43,9 @@ class User < ActiveRecord::Base
 
   def make_address
     update_attributes(address: "#{street}, #{city}, #{country}")
+  end
+
+  def notify_neighbours
+    NearbyMailer.user_notify(self).deliver
   end
 end
