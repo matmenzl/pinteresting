@@ -9,6 +9,7 @@ class Pin < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
   after_create :set_zip
+  after_create :notify_nearby_owners
 
   markable_as :offer, :request
 
@@ -40,6 +41,10 @@ class Pin < ActiveRecord::Base
 
   def is_near? user
     Pin.near(user.address, 1).include? self
+  end
+
+  def notify_nearby_owners
+    NearbyMailer.pin_notify(self).deliver
   end
 end
 
