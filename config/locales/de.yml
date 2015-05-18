@@ -58,8 +58,8 @@ de:
     brand_caption: "Eine Nachbarschaftsplattform, um sich kennen zu lernen, zu teilen und den Alltag zu organisieren."
     browse_pins: "Einträge durchsuchen"
     meetup: "When neighbours meet good things can happen"
-    caption1: "meinenachbarn.ch ist eine Nachbarschaftsplattform, um sich kennen zu lernen und den Alltag zu organisieren. Nachhaltigkeit ist uns wichtig, darum beschränkt sich alles auf dein Quartier."
-    caption2: "Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, dann erstelle einen Eintrag auf meinenachbarn.ch - <b>kostenlos</b> und <b>ökologisch nachhaltig</b>. Dein Eintrag ist nur für deine Nachbarn zu sehen."
+    caption1: "meetyourstreet.ch ist eine Nachbarschaftsplattform, um sich kennen zu lernen und den Alltag zu organisieren. Nachhaltigkeit ist uns wichtig, darum beschränkt sich alles auf dein Quartier."
+    caption2: "Du brauchst einen Gartenschlauch oder jemanden der auf deinen Hund aufpasst, dann erstelle einen Eintrag auf meetyourstreet.ch - <b>kostenlos</b> und <b>ökologisch nachhaltig</b>. Dein Eintrag ist nur für deine Nachbarn zu sehen."
     caption3: "<b>Sicherheit und Privatsphäre sind uns wichtig</b>. Deine Einträge sind nur in deiner Nachbarschaft zu sehen (Postleitzahl). Deine E-mail-Adresse bleibt privat. Kontakt wird mit einem <b>Online-Formular</b> hergestellt."
     more_info: "Mehr Informationen"
   pins:
@@ -71,7 +71,7 @@ de:
     available: "Erhältlich"
     rented: "Ausgelehnt"
     location_example: "Zürich, Schweiz"
-    full_text_example: "Gartenschlauch"
+    full_text_example: "z.B. Gartenschlauch"
     map: "Einträge in deiner Nachbarschaft:"
     filter: "Filtern nach Angebots-Typ"
     share:
@@ -84,6 +84,6 @@ de:
     destroy: "Löschen"
     deletion_confirm: "Bist du sicher? Das kann nicht rückgängig gemacht werden!"
     back: "Zurück"
-    no_result: "Vom Standort '%{location}' gibt es leider noch keine Angebote oder Gesuche.<br> Wie wäre es mit einem ersten <a href='pins/new'>Eintrag</a>?"
-    no_search: "Leider gibt es keine Resultate für '%{search_term}' im Quartier '%{location}'.<br> Starte mit einem Gesuch nach '%{search_term}' und poste einen <a href='pins/new'>Eintrag</a>!"
+    no_result: "Vom Standort '%{location}' gibt es leider noch keine Angebote oder Gesuche.</br> Wie wäre es mit einem ersten <a href='pins/new'>Eintrag</a>?"
+    no_search: "Leider gibt es keine Resultate für '%{search_term}' im Quartier '%{location}'.</br> Starte mit einem Gesuch nach '%{search_term}' und poste einen <a href='pins/new'>Eintrag</a>!"
     close: "Schliessen"
