@@ -84,6 +84,7 @@ de:
     destroy: "Löschen"
     deletion_confirm: "Bist du sicher? Das kann nicht rückgängig gemacht werden!"
     back: "Zurück"
-    no_result: "Vom Standort '%{location}' gibt es leider noch keine Angebote oder Gesuche.</br> Wie wäre es mit einem ersten <a href='pins/new'>Eintrag</a>?"
+    location: "Du greifst von '%{location}' aus zu."
+    no_result: "Gibt es leider noch keine Angebote oder Gesuche.</br> Wie wäre es mit einem ersten <br><a href='pins/new' class='btn btn-primary'>Eintrag</a> ?"
     no_search: "Leider gibt es keine Resultate für '%{search_term}' im Quartier '%{location}'.</br> Starte mit einem Gesuch nach '%{search_term}' und poste einen <a href='pins/new'>Eintrag</a>!"
     close: "Schliessen"
