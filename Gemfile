@@ -25,6 +25,7 @@ gem "blogit", '1.0.0.rc1'
 gem 'intercom-rails'
 gem 'http_accept_language'
 gem 'mandrill_mailer'
+gem "figaro"
 
 group :development, :test do 
 	gem 'sqlite3'

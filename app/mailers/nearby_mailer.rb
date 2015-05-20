@@ -1,6 +1,6 @@
 class NearbyMailer < MandrillMailer::MessageMailer
   include Rails.application.routes.url_helpers
-  default from: "noreply@meinenachbarn.ch"
+  default from: "noreply@meetyourstreet.ch"
 
   def pin_notify pin
     neighbours = User.near([pin.latitude, pin.longitude], 1).map{|u| { email: u.email, name: u.name }}.uniq
