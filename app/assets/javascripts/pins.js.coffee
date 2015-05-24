@@ -47,6 +47,12 @@ $ ->
       $li = $(createSidebarLi(json))
       $li.appendTo "#sidebar_container"
       bindLiToMarker $li, json.marker
+  lat = $(".map_container").data("latitude")
+  lng = $(".map_container").data("longitude")
+  circle = [{lng: lng, lat: lat, radius: 1609.14}]
+  centerpoint = new google.maps.LatLng(lat, lng);
+
+  circle_options = {strokeColor: "#0f9d58", strokeOpacity: 0.8, strokeWeight: 2, fillColor: "#0f9d58",fillOpacity: 0.1}
   handler = Gmaps.build("Google")
   handler.buildMap
     internal:
@@ -57,3 +63,6 @@ $ ->
     # createSidebar json_array
     handler.bounds.extendWith markers
     handler.fitMapToBounds()
+    handler.addCircles(circle, circle_options)
+    handler.getMap().setZoom(14);
+    handler.getMap().setCenter(centerpoint)

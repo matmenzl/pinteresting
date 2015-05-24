@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row"><h3><%= t "pins.map" %></h3></div>
   <div class="row">
-    <div class="map_container">
+    <div class="map_container" data-latitude="<%= current_user.latitude %>" data-longitude="<%= current_user.longitude %>">
       <div id="sidebar_builder" class="map_canvas"></div>
     </div>
   </div>
