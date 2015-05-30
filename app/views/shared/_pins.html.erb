@@ -34,7 +34,7 @@
           <% if params[:q] %>
             <%== t("pins.no_search", search_term: params[:q][:description_cont]) %>
           <% else %>
-            <%== @location.blank? ? t("pins.no_result") : t("pins.location", location: @location)+t("pins.no_result") %>
+            <%== @location.blank? ? t("pins.no_result") : t("pins.location", location: @location) + t("pins.no_result") %>
           <% end %>
         </h3>
       </div>
